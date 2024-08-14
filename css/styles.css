@@ -340,7 +340,7 @@ img.Waves {
 .bg-yelloww {
   background-color: var(--mainYellow);
 }
-/* 
+/* flip-cards*/
 .obje .Card {
   width: 300px;
   height: 200px;
@@ -375,9 +375,12 @@ img.Waves {
   transform: rotateY(180deg);
   border-radius: 15px;
   margin-right: 10px;
-
+  color: white !important;
 }
-
+.obje .Card .back-card p{
+  color: white !important;
+  padding-top: 12px;
+}
 .obje .Card .front-card {
 
   background: rgba(255, 255, 255, 0.1);
@@ -386,56 +389,9 @@ img.Waves {
   text-align: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-} */
-.obje .Card {
-  position: relative;
-  perspective: 1000px; /* Creates the 3D space for the flip effect */
 }
-
-.obje .Card:hover .front-card {
-  transform: rotateY(180deg);
-}
-
-.obje .Card:hover .back-card {
-  transform: rotateY(0deg);
-}
-
-.obje .Card .front-card,
-.obje .Card .back-card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  backface-visibility: hidden;
-  transition: transform 1.3s ease;
-  border-radius: 15px;
-}
-
-.obje .Card .front-card {
-  background: rgba(255, 255, 255, 0.1);
-  margin: 0 10px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-.obje .Card .back-card {
-  color: var(--mainYellow) !important;
-  transform: rotateY(180deg);
-  margin-right: 10px;
-}
-
-/* Ensuring 3D transform is preserved */
-.obje .Card .front-card,
-.obje .Card .back-card {
-  transform-style: preserve-3d;
-}
-
 /*end*/
+
 
 .feture-box {
   flex: 1 0 23%;
